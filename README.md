@@ -8,7 +8,8 @@ For a logical XOR function (denoted by $\oplus$), we expect the following logica
 |  1  |  0  |      1      |
 |  0  |  1  |      1      |
 |  1  |  1  |      0      |
- \
+
+
 Recall that the OR and AND functions have the following truth tables
 | $X$ | $Y$ | $X\land Y$ |
 | --- | --- | ---------- |
@@ -17,13 +18,14 @@ Recall that the OR and AND functions have the following truth tables
 |  0  |  1  |      0     |
 |  1  |  1  |      1     | 
 
+
 | $X$ | $Y$ | $X\lor Y$ |
 | --- | --- | --------- |
 |  0  |  0  |     0     |
 |  1  |  0  |     1     |
 |  0  |  1  |     1     |
 |  1  |  1  |     1     |
- \
+
 
 There are 2 different ways to approach constructing the XOR function using the previous tables. The first is more complicated, but probably a useful exercise for more complex functions which can't be done through the intuitive approach. 
 ### Method 1: By Eye
@@ -37,6 +39,7 @@ Instead, let's try adding a different logical function into the mix. Notice that
 |  0  |  1  |        1         |
 |  1  |  1  |        0         |
 
+
 If we were to use the OR function to combine $\neg(X\land Y)$ and $Y\lor Y$, this would give us an incorrect result for the XOR with $X=0$ and $Y=0$. But if were to use the AND function, we meet all the required conditions! To double check:
 | $X$ | $Y$ | $\neg(X\land Y)$ | $X\lor Y$ | $\neg (X\land Y)\land (X\lor Y)$ |
 | --- | --- | ---------------- | --------- | -------------------------------- |
@@ -44,6 +47,7 @@ If we were to use the OR function to combine $\neg(X\land Y)$ and $Y\lor Y$, thi
 |  1  |  0  |        1         |     1     |                1                 |
 |  0  |  1  |        1         |     1     |                1                 |
 |  1  |  1  |        0         |     1     |                0                 |
+
 
 That gives the same logical table as the XOR function! Therefore, 
 $$X\oplus Y = \neg (X\land Y)\land (X\lor Y)$$
